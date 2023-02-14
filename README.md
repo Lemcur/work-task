@@ -13,6 +13,8 @@ Model validations with `shoulda_matchers`, and service should also be tested in 
 
 I've decided to split the customizable questions into two categories, values (strings/number) and choices(single/multiple) - as these are fundamentally different in validation/inclusion, but then Single Table Inheritance allows us to extend the functionality if we wanted to add a different choice question, like UpToTwoChoices
 
+## Multiple Questions with the same name
+
 There may be a reason to decouple Question from the User, and introduce Answer (`belongs_to :user, belongs_to: :question`) that, when present, allows user to answer question, so that Questions (like age - quite universal) do not exist for each separate user
 
 ### Refactoring 
